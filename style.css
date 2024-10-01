@@ -1,0 +1,116 @@
+:root {
+  --blue: #106EBE !important;
+  --parrot: #0FFCBE !important;
+  --darkGray: #333333 !important;
+}
+
+.bg-blue {
+  background-color: var(--blue) !important;
+}
+
+.bg-parrot {
+  background-color: var(--parrot) !important;
+}
+
+.text-blue {
+  color: var(--blue) !important;
+}
+
+.text-parrot {
+  color: var(--parrot) !important;
+}
+
+.text-darkGray {
+  color: var(--darkGray) !important;
+}
+
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.h-w-100 {
+  height: 100px !important;
+  width: 100px !important;
+}
+
+.min-h-391 {
+  min-height: 391px !important;
+}
+
+.h-600 {
+  height: 600px !important;
+}
+
+.fs-42 {
+  font-size: 42px !important;
+}
+
+.radius-t-l-b-r-60 {
+  border-top-left-radius: 60px !important;
+  border-bottom-right-radius: 60px !important;
+}
+
+.text-truncate4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.t-b-l-r-0 {
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.-z-1 {
+  z-index: -1 !important;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat !important;
+}
+
+.bg-cover {
+  background-size: cover !important;
+}
+
+.video-cover {
+  background-color: rgba(0, 0, 0, 0.4117647059);
+}
+
+.navbar-toggler {
+  color: transparent !important;
+  border: transparent !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("/material/images/barsIcon.png") !important;
+}
+
+.back-attachment1 {
+  background-attachment: fixed !important;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, #0F172A 100%), url("/material/images/1.jpg") !important;
+}
+
+.back-attachment2 {
+  background-attachment: fixed !important;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, #0F172A 100%), url("/material/images/2.webp") !important;
+}
+
+.back-attachment3 {
+  background-attachment: fixed !important;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, #0F172A 100%), url("/material/images/3.jpg") !important;
+}
+
+.back-attachment4 {
+  background-attachment: fixed !important;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, #0F172A 100%), url("/material/images/4.jpeg") !important;
+}/*# sourceMappingURL=style.css.map */
