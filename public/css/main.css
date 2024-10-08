@@ -39,8 +39,16 @@ body {
   width: 100px !important;
 }
 
-.min-h-391 {
-  min-height: 391px !important;
+.min-h-192 {
+  min-height: 192px !important;
+}
+
+.min-h-487 {
+  min-height: 487px !important;
+}
+
+.max-w-272 {
+  max-width: 272px !important;
 }
 
 .h-600 {
@@ -91,5 +99,5 @@ body {
 }
 
 .navbar-toggler-icon {
-  background-image: url("/material/images/barsIcon.png") !important;
+  background-image: url("/images/barsIcon.png") !important;
 }

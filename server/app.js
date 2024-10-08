@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
     res.render('pages/home');
 });
 app.get('/services',(req,res)=>{
-    res.render('services');
+    res.render('pages/services');
 });
 app.get('/contact-us',(req,res)=>{
     res.render('pages/contactUS');
@@ -20,4 +20,12 @@ app.get('/contact-us',(req,res)=>{
 app.get('/about-us',(req,res)=>{
     res.render('pages/aboutUs');
 });
+
+
+// implemeting chat whatsapp logic
+app.get('/whatsapp',(req,res)=>{
+    const number = '923006047058';
+    const whatsappUrl = `https://wa.me/${number}`;
+    res.redirect(whatsappUrl);
+})
 app.listen(5000);
