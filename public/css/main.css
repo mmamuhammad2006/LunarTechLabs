@@ -106,12 +106,6 @@ body {
   position: fixed;
   bottom: 20px; /* Distance from the bottom */
   right: 20px; /* Distance from the right */
-  background-color: #007bff; /* Button color */
-  color: white; /* Text color */
-  padding: 10px 20px; /* Button padding */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor on hover */
   z-index: 1000; /* Ensure it stays on top */
 }
 
