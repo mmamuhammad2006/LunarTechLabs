@@ -3,7 +3,7 @@ const router = express.Router();
 
 // implemeting chat whatsapp logic
 router.get('/whatsapp',(req,res)=>{
-    const number = '923006047058';
+    const number = '923456047058';
     const whatsappUrl = `https://wa.me/${number}`;
     res.redirect(whatsappUrl);
 })
