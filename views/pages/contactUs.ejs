@@ -10,21 +10,25 @@
                             <h3 class="fw-bold">Contact Us</h3>
                         </div>
                     </div>
-                    <form class="row">
+                    <form action="/send-mail" method="POST" class="row">
                         <div class="mb-3 col-sm-6 col-12 pe-sm-2">
                           <label for="Name" class="form-label">Name</label>
-                          <input type="text" class="form-control px-3 py-2" placeholder="Name" aria-label="First name" id="Name">
+                          <input type="text" class="form-control px-3 py-2" name="name" placeholder="Name" aria-label="First name" id="Name">
                           </div>
                         <div class="mb-3 col-sm-6 col-12 ps-sm-2">
                           <label for="Email" class="form-label">Email address</label>
-                          <input type="email" class="form-control px-3 py-2" id="Email"  placeholder="Email"  aria-describedby="emailHelp">
+                          <input type="email" class="form-control px-3 py-2" id="Email" name="email" placeholder="Email"  aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control px-3 py-2" id="subject" name="subject" placeholder="Enter your subject">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                            <textarea class="form-control p-2" id="exampleFormControlTextarea1" rows="3" placeholder="Please type your message here"></textarea>
+                            <textarea class="form-control p-2" id="exampleFormControlTextarea1" rows="3" name="message" placeholder="Please type your message here"></textarea>
                           </div>
                           <div class="py-2">
-                            <div class="btn rounded-5 bg-blue py-2 px-5 m-auto text-white hover-zoom">Submit</div>
+                            <button type="Submit" class="btn rounded-5 bg-blue py-2 px-5 m-auto text-white hover-zoom">Submit</button>
                           </div>
                       </form>
                 </div>

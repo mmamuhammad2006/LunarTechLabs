@@ -2,30 +2,26 @@ const express = require('express');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
 const app = express();
+var bodyParser = require('body-parser');    
 
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(expressLayouts);
+
 app.set('layout', './layouts/app');
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname, '../views'));
-app.get('/',(req,res)=>{
-    res.render('pages/home');
-});
-app.get('/services',(req,res)=>{
-    res.render('pages/services');
-});
-app.get('/contact-us',(req,res)=>{
-    res.render('pages/contactUS');
-});
-app.get('/about-us',(req,res)=>{
-    res.render('pages/aboutUs');
-});
 
+// Navbar links routes
+const navRoutes = require('./routes/navRoute');
+app.use('/',navRoutes);
 
-// implemeting chat whatsapp logic
-app.get('/whatsapp',(req,res)=>{
-    const number = '923006047058';
-    const whatsappUrl = `https://wa.me/${number}`;
-    res.redirect(whatsappUrl);
-})
+// whatsapp route
+const whatsappRoute = require('./routes/whatsappRoute');
+app.use('/',whatsappRoute);
+// Send Mail route
+
+const sendMail = require('./controller/sendMailController');
+app.use('/',sendMail);
+
 app.listen(5000);
