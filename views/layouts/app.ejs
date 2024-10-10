@@ -27,20 +27,31 @@
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/logic.js"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= locals.analyticsId %>"></script>
+
   </head>
 
   <body>
     <!-- Navbar -->
   
     <%- include('../partials/header.ejs') %>
+
+    <%- body %>
     <a href="/contact-us" id="quote-button" class="bg-blue rounded-4 p-3 text-decoration-none shadow">
       <i class="fa-solid fa-quote-left d-block text-center fs-3 text-parrot"></i>
       <div href="#quote-form" class="quote-link">Request a Quote</div>
     </a>
-    <%- body %>
-
     <%- include('../partials/footer.ejs') %>
   
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<%= locals.analyticsId %>');
+    </script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
