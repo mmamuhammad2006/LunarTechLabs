@@ -1,10 +1,13 @@
 const express = require('express');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
+const bodyParser = require('body-parser');    
+const helmetMiddleware = require('./security/helmet');
 const app = express();
-var bodyParser = require('body-parser');    
 require('dotenv').config();
 
+helmetMiddleware(app);
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(expressLayouts);
@@ -30,5 +33,5 @@ app.use('/',whatsappRoute);
 const sendMail = require('./controller/sendMailController');
 app.use('/',sendMail);
 
-
-app.listen(5000);
+const port = process.env.PORT || 5000;
+app.listen(port);

@@ -3,16 +3,16 @@ const router = express.Router();
 
 
 router.get('/',(req,res)=>{
-    res.render('pages/home');
+    res.render('pages/home',{title: 'Home'});
 });
 router.get('/services',(req,res)=>{
-    res.render('pages/services');
+    res.render('pages/services',{title: 'Products'});
 });
 router.get('/contact-us',(req,res)=>{
-    res.render('pages/contactUS');
+    res.render('pages/contactUS',{title: 'Contact Us'});
 });
 router.get('/about-us',(req,res)=>{
-    res.render('pages/aboutUs');
+    res.render('pages/aboutUs',{title: 'About Us'});
 });
 
 module.exports = router;

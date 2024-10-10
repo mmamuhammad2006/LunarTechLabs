@@ -1,9 +1,23 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 const nodemailer = require('nodemailer');
+const { body, validationResult } = require('express-validator');
 
 
-app.post('/send-mail',async(req,res)=>{
+router.post('/send-mail',
+  [
+    body('name').isString().notEmpty().withMessage('Name is required'),
+    body('email').isEmail().withMessage('Valid email is required'),
+    body('subject').isString().notEmpty().withMessage('Subject is required'),
+    body('message').isString().notEmpty().withMessage('Message is required'),
+  ],
+  async(req,res)=>{
+    const error = validationResult(req);
+    if (!error.isEmpty()) {
+        return res.render('pages/contactUS',{title: 'Conctact Us'});
+    }
+    console.log('Email sent successfully');
+    // const { name, email, message } = req.body;
 
     const {name} = req.body;
     const {email} = req.body;
@@ -38,7 +52,7 @@ app.post('/send-mail',async(req,res)=>{
       
       main().catch(console.error);// This shows emails on 
       
-    res.send('Email send!')
+      res.render('pages/contactUS',{title: 'Conctact Us'});
 })
 
-module.exports = app
+module.exports = router
