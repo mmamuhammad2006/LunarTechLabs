@@ -1,6 +1,6 @@
 :root {
-  --blue: #106EBE !important;
-  --parrot: #0FFCBE !important;
+  --blue: #106ebe !important;
+  --parrot: #0ffcbe !important;
   --darkGray: #333333 !important;
 }
 
@@ -59,6 +59,14 @@ body {
   font-size: 42px !important;
 }
 
+.border-parrot {
+  border: 2px solid var(--parrot) !important;
+}
+
+.border-blue {
+  border: 2px solid var(--blue) !important;
+}
+
 .radius-t-l-b-r-60 {
   border-top-left-radius: 60px !important;
   border-bottom-right-radius: 60px !important;
@@ -104,12 +112,72 @@ body {
 
 #quote-button {
   position: fixed;
-  bottom: 20px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
-  z-index: 1000; /* Ensure it stays on top */
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
 #quote-button .quote-link {
   text-decoration: none;
   color: white;
+}
+
+.custom-button {
+  position: relative !important;
+  display: block !important;
+  font-size: 14px !important;
+  font-family: "montserrat" !important;
+  text-decoration: none !important;
+  color: white !important;
+  background-color: transparent !important;
+  padding: 10px 44px !important;
+  text-transform: uppercase !important;
+  overflow: hidden !important;
+  transition: 1s all ease !important;
+}
+
+.custom-button::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: -1 !important;
+  transition: all 0.6s ease !important;
+}
+
+.btn-parrot::before {
+  width: 0% !important;
+  opacity: 0 !important;
+  border: 2px solid var(--parrot) !important;
+}
+
+.btn-parrot:hover::before {
+  width: 100% !important;
+  opacity: 1 !important;
+}
+
+.btn-parrot:hover {
+  background-color: var(--parrot) !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  color: var(--darkGray) !important;
+}
+
+.btn-blue::before {
+  width: 0% !important;
+  opacity: 0 !important;
+  border: 2px solid var(--blue) !important;
+}
+
+.btn-blue:hover::before {
+  width: 100% !important;
+  opacity: 1 !important;
+}
+
+.btn-blue:hover {
+  background-color: var(--blue) !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  color: white !important;
 }

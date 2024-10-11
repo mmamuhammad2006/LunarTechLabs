@@ -9,3 +9,4 @@ router.get('/whatsapp',(req,res)=>{
 })
 
 module.exports = router
+// console.log(module);
