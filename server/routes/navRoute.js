@@ -10,28 +10,28 @@ const cache = cacheExpress({
 router.use(cache);
 router.get('/',(req,res)=>{
     try{
-        res.render('pages/home',{title: 'Home'});
+        res.render('pages/home',{title: 'Home',target: '#services-sec'});
     }catch(error){
         res.status(500).send('Internal Server Error')
     }
 });
 router.get('/services',(req,res)=>{
     try{
-        res.render('pages/services',{title: 'Products'});
+        res.render('pages/services',{title: 'Products',target: '#products-sec'});
     }catch(error){
         res.status(500).send('Internal Server Error')
     }
 });
 router.get('/contact-us',(req,res)=>{
     try{
-        res.render('pages/contactUS',{title: 'Contact Us'});
+        res.render('pages/contactUS',{title: 'Contact Us',target: '#contactUs-sec'});
     }catch (error){
         res.status(500).send('Internal Server Error')
     }
 });
 router.get('/about-us',(req,res)=>{
     try{
-        res.render('pages/aboutUs',{title: 'About Us'});
+        res.render('pages/aboutUs',{title: 'About Us',target: '#aboutUs-sec'});
     }catch (error){
         res.status(500).send('Internal Server Error')
     }
