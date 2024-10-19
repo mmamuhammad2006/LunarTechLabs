@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const helmet = require('./security/helmet');
+// const helmet = require('./security/helmet');
 
 const app = express();
 
 // Middleware
-helmet(app);  // Helmet for security headers
+// helmet(app);  // Helmet for security headers
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -18,9 +18,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 
 // Routes
-const navRoutes = require('./routes/navRoute');
-const whatsappRoute = require('./routes/whatsappRoute');
-const sendMailController = require('./controller/sendMailController');
+const navRoutes = require('../routes/navRoute');
+const whatsappRoute = require('../routes/whatsappRoute');
+const sendMailController = require('../controller/sendMailController');
 
 app.use('/', navRoutes);
 app.use('/', whatsappRoute);
