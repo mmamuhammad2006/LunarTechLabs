@@ -1,13 +1,13 @@
 const express = require('express');
-const cacheExpress = require('cache-express');
+// const cacheExpress = require('cache-express');
 const router = express.Router();
 
-const cache = cacheExpress({
-    duration: 3600000,
-    cacheControl: true,
-    maxAge: 3600
-});
-router.use(cache);
+// const cache = cacheExpress({
+//     duration: 3600000,
+//     cacheControl: true,
+//     maxAge: 3600
+// });
+// router.use(cache);
 router.get('/',(req,res)=>{
     try{
         res.render('pages/home',{title: 'Home',target: '#services-sec'});
