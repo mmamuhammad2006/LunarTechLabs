@@ -9,7 +9,7 @@ router.get('/whatsapp',async(req,res)=>{
         res.redirect(whatsappUrl);
     }catch(error){
         console.error("Error in redirecting to WhatsApp:", error);
-        res.status(500).send('Internal Server Error');
+        res.status(500).send('Internal Server Error', error);
     }
 
 })
