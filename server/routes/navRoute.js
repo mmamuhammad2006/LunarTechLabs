@@ -12,6 +12,7 @@ router.get('/',(req,res)=>{
     try{
         res.render('pages/home',{title: 'Home',target: '#services-sec'});
     }catch(error){
+        res.send('Home page internal server error');
         res.status(500).send('Internal Server Error',error)
     }
 });
